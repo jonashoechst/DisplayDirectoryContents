@@ -20,55 +20,31 @@ $message = $codes[$status][1];
 ?>
 
 <!doctype html>
-<html>
+<html lang="de">
 <head>
-	<title>That's an Error!</title>
-	<style>
-	  html 
-	{color:#333;
-	 font-family: "Lucida Console", Courier, monospace;
-	 font-size:14px;
-	 background:#eeeeee;}
- 
-	.content
-	{margin:0 auto;
-	 width:1000px;
-	 margin-top:20px;
-	 padding:10px 0 10px 0;
-	 border:1px solid #EEE;
-     background: none repeat scroll 0 0 white;
-     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
-     position: relative;
-}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href=".css/bootstrap.min.css">
 
-	h1
-		{font-size:18px;
-		 text-align:center;}
-
-	h1.title 
-		{color:red;}
-	
-	h2
-		{font-size:16px;
-		 text-align:center;}
-	
-	p 
-		{text-align:center;}
-
-	hr
-		{border:#fe4902 solid 1px;}
-
-	</style>
+	<title><?php echo(basename(__DIR__)); ?> Videos</title>
 </head>
 
-<body>
-
-	<div class="content">
-	<h1>Sorry, but that's an error!</h1>
-	<h1 class="title"><?php echo $errortitle; ?></h1>
-	<hr>
-	<p><?php echo $message;?></p>
-	</div>
-
+<body style="margin-bottom: 60px">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#"><?php echo(basename(__DIR__)); ?> Videos</a>
+			</div>
+		</nav>
+	</header>
+	
+	<main role="main" class="container">
+		<div class="jumbotron">
+			<h1>Sorry, but that's an error!</h1>
+			<p><?php echo $errortitle; ?>: <?php echo $message;?></p>
+		</div>
+		<hr />
+		<center class="text-muted">Simple Video Listing &copy; Jonas Höchst, 2018</center>
+	</main>
 </body>
 </html>

@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href=".css/bootstrap.min.css">
+	<link rel="stylesheet" href=".css/sticky-footer.css">
 
 	<title><?php echo(basename(__DIR__)); ?> Videos</title>
 </head>
 
-<body style="margin-bottom: 60px">
+<body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
@@ -62,17 +63,16 @@
 		
 		echo ("
     	<div class='container'>
-			<h2 class='mt-5'>$name</h2>
-			<video src='./$href' controls preload='auto' width='100%'>
-				Dieser Browser unterstützt das Videoformat nicht.
-			</video>
+			<h2 class='mt-4'>$name</h2>
+			<video src='./$href' controls preload='auto' width='100%'></video>
 			<strong>$date Uhr</strong> &bullet; $size &bullet; $extension Video
 		</div>
 		<hr />");
 	}
 	?>
-
-	<center class="text-muted">Simple Video Listing &copy; Jonas Höchst, 2018</center>
 	</main>
+	<footer class="footer">
+		<center class="text-muted">Simple Video Listing &bullet; Jonas Höchst &copy; 2018</center>
+	</footer>
 </body>
 </html>

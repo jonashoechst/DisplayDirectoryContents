@@ -25,11 +25,12 @@ $message = $codes[$status][1];
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href=".css/bootstrap.min.css">
+	<link rel="stylesheet" href=".css/sticky-footer.css">
 
 	<title><?php echo(basename(__DIR__)); ?> Videos</title>
 </head>
 
-<body style="margin-bottom: 60px">
+<body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
@@ -39,12 +40,15 @@ $message = $codes[$status][1];
 	</header>
 	
 	<main role="main" class="container">
-		<div class="jumbotron">
-			<h1>Sorry, but that's an error!</h1>
-			<p><?php echo $errortitle; ?>: <?php echo $message;?></p>
+		<div class='container'>
+			<h2 class='mt-4'>Sorry, but that's an error!</h2>
+			<h2><?php echo $errortitle; ?></h2>
+			<p><?php echo $message;?></p>
 		</div>
-		<hr />
-		<center class="text-muted">Simple Video Listing &copy; Jonas Höchst, 2018</center>
+
 	</main>
+	<footer class="footer">
+		<center class="text-muted">Simple Video Listing &bullet; Jonas Höchst &copy; 2018</center>
+	</footer>
 </body>
 </html>

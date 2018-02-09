@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href=".css/bootstrap.min.css">
-	<link rel="stylesheet" href=".css/sticky-footer.css">
+	<link rel="stylesheet" href=".bootstrap.min.css">
+	<link rel="stylesheet" href=".sticky-footer.css">
 
 	<title><?php echo(basename(__DIR__)); ?> Videos</title>
 </head>

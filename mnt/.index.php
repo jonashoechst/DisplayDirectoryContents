@@ -1,5 +1,5 @@
 <?php
-    $video_extensions = array('m4v', 'mp4', 'webm', 'ogv', 'mpg', 'mpeg', 'mov');
+    $video_extensions = array('m4v', 'M4V', 'mp4', 'MP4', 'webm', 'WEBM', 'ogv', 'OGV', 'mpg', 'MPG', 'mpeg', 'MPEG', 'mov', 'MOV', 'ts', 'TS', 'mts', 'MTS');
 
     function pretty_filesize($file) {
     	$size = filesize($file);

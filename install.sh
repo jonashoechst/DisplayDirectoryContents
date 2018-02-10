@@ -8,8 +8,8 @@ echo
 echo "### Installing webserver..."
 opkg install php7-fastcgi nginx
 cat > /etc/nginx/nginx.conf <<EOF
-user nobody nogroup;
-worker_processes  1;
+user                nobody nogroup;
+worker_processes    1;
 
 events {
     worker_connections  1024;
@@ -21,14 +21,14 @@ http {
     keepalive_timeout   65;
 
     server {
-        listen	80;
-        root	/mnt/;
-        index /.index.php;
+        listen  80;
+        root    /mnt/;
+        index   /.index.php;
 	
         location ~ \.php$ {
-            include 	fastcgi_params;
-            fastcgi_param	SCRIPT_FILENAME	$document_root$fastcgi_script_name;
-            fastcgi_pass	127.0.0.1:1026;
+            include         fastcgi_params;
+            fastcgi_param   SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
+            fastcgi_pass    127.0.0.1:1026;
         }
     }
 }
